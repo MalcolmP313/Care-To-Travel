@@ -1,0 +1,287 @@
+export default function CareToTravelPage() {
+  return (
+    <div style={{
+      fontFamily: 'Poppins, sans-serif',
+      background: 'linear-gradient(to bottom, #ffe066, #ffb347, #ff6ec7)',
+      color: '#222',
+      overflowX: 'hidden'
+    }}>
+      <style>{`
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        .hero {
+          height: 100vh;
+          background:
+            linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+            url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1600&auto=format&fit=crop');
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 20px;
+        }
+
+        .hero-content h1 {
+          font-size: 5rem;
+          color: white;
+          font-weight: 800;
+          margin-bottom: 20px;
+          text-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h2 {
+          color: #ffe066;
+          font-size: 2rem;
+          margin-bottom: 20px;
+        }
+
+        .hero-content p {
+          color: white;
+          font-size: 1.2rem;
+          max-width: 800px;
+          margin: auto;
+          margin-bottom: 35px;
+          line-height: 1.8;
+        }
+
+        .btn {
+          background: #ff2e93;
+          color: white;
+          padding: 16px 38px;
+          border-radius: 50px;
+          text-decoration: none;
+          font-size: 1.1rem;
+          font-weight: bold;
+          display: inline-block;
+          transition: 0.3s ease;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        .btn:hover {
+          transform: scale(1.08);
+          background: #ff0077;
+        }
+
+        section {
+          padding: 90px 8%;
+        }
+
+        .section-title {
+          text-align: center;
+          font-size: 3rem;
+          margin-bottom: 60px;
+          color: white;
+          font-weight: 800;
+          text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+        }
+
+        .features,
+        .destination-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 35px;
+        }
+
+        .feature-card,
+        .destination-card {
+          background: white;
+          border-radius: 30px;
+          overflow: hidden;
+          box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+          transition: 0.3s ease;
+        }
+
+        .feature-card:hover,
+        .destination-card:hover {
+          transform: translateY(-10px);
+        }
+
+        .feature-card {
+          padding: 40px 30px;
+          text-align: center;
+        }
+
+        .emoji {
+          font-size: 4rem;
+          margin-bottom: 20px;
+        }
+
+        .feature-card h3,
+        .destination-content h3 {
+          color: #ff2e93;
+          margin-bottom: 15px;
+        }
+
+        .feature-card p,
+        .destination-content p {
+          line-height: 1.8;
+          color: #555;
+        }
+
+        .destinations {
+          background: linear-gradient(to right, #ff6ec7, #ffd93d, #ff914d);
+        }
+
+        .destination-card img {
+          width: 100%;
+          height: 260px;
+          object-fit: cover;
+        }
+
+        .destination-content {
+          padding: 25px;
+        }
+
+        .cta {
+          background: linear-gradient(to right, #0077ff, #ff2e93, #ff914d);
+          text-align: center;
+          color: white;
+        }
+
+        .cta h2 {
+          font-size: 4rem;
+          margin-bottom: 25px;
+        }
+
+        .cta p {
+          font-size: 1.3rem;
+          max-width: 900px;
+          margin: auto;
+          line-height: 1.8;
+          margin-bottom: 40px;
+        }
+
+        footer {
+          background: #111;
+          color: white;
+          text-align: center;
+          padding: 40px 20px;
+        }
+
+        @media(max-width: 768px) {
+          .hero-content h1 {
+            font-size: 3rem;
+          }
+
+          .hero-content h2 {
+            font-size: 1.4rem;
+          }
+
+          .section-title,
+          .cta h2 {
+            font-size: 2.3rem;
+          }
+        }
+      `}</style>
+
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Care To Travel</h1>
+          <h2>Your Dream Vacation Starts Here ✈️🌴</h2>
+
+          <p>
+            Explore luxury Mexico resorts, sunny Florida escapes, magical Disney adventures,
+            thrilling Universal experiences, and adrenaline-pumping Cedar Point coasters.
+          </p>
+
+          <a href="#destinations" className="btn">Start Your Adventure</a>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="section-title">Why Choose Care To Travel?</h2>
+
+        <div className="features">
+          <div className="feature-card">
+            <div className="emoji">🌎</div>
+            <h3>Luxury Destinations</h3>
+            <p>Escape to breathtaking beaches and unforgettable tropical resorts.</p>
+          </div>
+
+          <div className="feature-card">
+            <div className="emoji">🎢</div>
+            <h3>Epic Adventures</h3>
+            <p>Experience Disney, Universal, Cedar Point, and nonstop thrills.</p>
+          </div>
+
+          <div className="feature-card">
+            <div className="emoji">☀️</div>
+            <h3>Stress-Free Planning</h3>
+            <p>We handle every detail so your vacation is smooth and exciting.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="destinations" id="destinations">
+        <h2 className="section-title">Featured Destinations & Adventures</h2>
+
+        <div className="destination-grid">
+          {[
+            {
+              title: 'Mexico Resorts',
+              img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop',
+              text: 'Relax in Cancun, Cabo, and Tulum with crystal-clear waters and luxury resorts.',
+              button: 'Explore Resorts'
+            },
+            {
+              title: 'Florida Escapes',
+              img: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1400&auto=format&fit=crop',
+              text: 'Enjoy tropical beaches, exciting nightlife, and sunny weather year-round.',
+              button: 'Discover Florida'
+            },
+            {
+              title: 'Universal Studios',
+              img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1400&auto=format&fit=crop',
+              text: 'Step into movie magic with thrilling rides and unforgettable adventures.',
+              button: 'Feel The Thrill'
+            },
+            {
+              title: 'Disney Magic',
+              img: 'https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?q=80&w=1400&auto=format&fit=crop',
+              text: 'Create magical family memories with castles, fireworks, and beloved characters.',
+              button: 'Experience Magic'
+            },
+            {
+              title: 'Cedar Point',
+              img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop',
+              text: 'Ride legendary roller coasters at the coaster capital of the world.',
+              button: 'Ride Now'
+            }
+          ].map((place, index) => (
+            <div key={index} className="destination-card">
+              <img src={place.img} alt={place.title} />
+
+              <div className="destination-content">
+                <h3>{place.title}</h3>
+                <p>{place.text}</p>
+                <a href="#" className="btn">{place.button}</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="cta">
+        <h2>Adventure Is Calling!</h2>
+
+        <p>
+          Whether you dream of tropical beaches, luxury resorts, magical theme parks,
+          or thrilling roller coasters — Care To Travel is ready to make your perfect vacation a reality.
+        </p>
+
+        <a href="#" className="btn">Book Your Dream Vacation</a>
+      </section>
+
+      <footer>
+        <h3>Care To Travel</h3>
+        <p>Turning Dream Vacations Into Lifelong Memories ✈️</p>
+      </footer>
+    </div>
+  )
+}
